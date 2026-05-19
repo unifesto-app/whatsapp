@@ -53,7 +53,7 @@ In Vercel dashboard:
 2. Navigate to Environment Variables
 3. Add:
    ```
-   NEXT_PUBLIC_API_BASE=https://api.unifesto.app
+   NEXT_PUBLIC_API_URL=https://api.unifesto.app
    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
    ```
@@ -124,7 +124,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - NEXT_PUBLIC_API_BASE=https://api.unifesto.app
+      - NEXT_PUBLIC_API_URL=https://api.unifesto.app
       - NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
       - NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
     restart: unless-stopped
@@ -170,7 +170,7 @@ module.exports = {
     env: {
       NODE_ENV: 'production',
       PORT: 3000,
-      NEXT_PUBLIC_API_BASE: 'https://api.unifesto.app',
+      NEXT_PUBLIC_API_URL: 'https://api.unifesto.app',
       NEXT_PUBLIC_SUPABASE_URL: 'your_supabase_url',
       NEXT_PUBLIC_SUPABASE_ANON_KEY: 'your_supabase_anon_key'
     }
@@ -241,7 +241,7 @@ amplify publish
 Create `.env.production`:
 ```env
 # Backend API
-NEXT_PUBLIC_API_BASE=https://api.unifesto.app
+NEXT_PUBLIC_API_URL=https://api.unifesto.app
 
 # Supabase
 NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
@@ -384,7 +384,7 @@ jobs:
         run: npm run build
         working-directory: ./whatsapp
         env:
-          NEXT_PUBLIC_API_BASE: ${{ secrets.API_BASE }}
+          NEXT_PUBLIC_API_URL: ${{ secrets.API_BASE }}
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
           
@@ -549,7 +549,7 @@ npm run build
 - Check Vercel/server logs
 
 ### API Calls Failing
-- Verify `NEXT_PUBLIC_API_BASE` is correct
+- Verify `NEXT_PUBLIC_API_URL` is correct
 - Check CORS configuration on backend
 - Verify backend is accessible
 

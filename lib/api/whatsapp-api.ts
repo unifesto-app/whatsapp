@@ -1,4 +1,4 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || 'https://api.unifesto.app';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'https://api.unifesto.app';
 
 export interface SendMessagePayload {
   to: string;

@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from 'next/font/local';
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+// Primary font - Agrandir
+const agrandir = localFont({
+  src: './assets/fonts/Agrandir/Agrandir-Regular.otf',
+  variable: '--font-agrandir',
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+// Logo font - Sweet Apricot
+const sweetApricot = localFont({
+  src: './assets/fonts/SweetApricot/SweetApricot.ttf',
+  variable: '--font-sweet-apricot',
+  display: 'swap',
+  weight: '400',
+  style: 'normal',
 });
 
 export const metadata: Metadata = {
@@ -25,9 +31,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${agrandir.variable} ${sweetApricot.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
   );
 }

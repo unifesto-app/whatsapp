@@ -601,14 +601,14 @@ Handles authentication and route protection.
 Required in `.env.local`:
 
 ```env
-NEXT_PUBLIC_API_BASE=https://api.unifesto.app
+NEXT_PUBLIC_API_URL=https://api.unifesto.app
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
 Access in code:
 ```typescript
-const apiBase = process.env.NEXT_PUBLIC_API_BASE;
+const apiBase = process.env.NEXT_PUBLIC_API_URL;
 ```
 
 ---
@@ -678,7 +678,7 @@ const payload: SendMessagePayload = {
 ### Common Issues
 
 **Issue: API calls fail**
-- Check `NEXT_PUBLIC_API_BASE` is correct
+- Check `NEXT_PUBLIC_API_URL` is correct
 - Verify backend is running
 - Check network tab in browser
 

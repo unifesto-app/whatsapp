@@ -12,7 +12,7 @@ npm install
 ### 2. Configure Environment
 Create `.env.local` file:
 ```env
-NEXT_PUBLIC_API_BASE=https://api.unifesto.app
+NEXT_PUBLIC_API_URL=https://api.unifesto.app
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
@@ -79,7 +79,7 @@ See [INTEGRATION.md](./INTEGRATION.md) for detailed API specs.
 **Solution**: Login with valid Supabase credentials
 
 ### Issue: "Network error"
-**Solution**: Check `NEXT_PUBLIC_API_BASE` points to correct backend URL
+**Solution**: Check `NEXT_PUBLIC_API_URL` points to correct backend URL
 
 ---
 

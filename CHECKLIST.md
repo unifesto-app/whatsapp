@@ -233,7 +233,7 @@
 
 ### Environment Setup
 - [ ] Create `.env.local` file
-- [ ] Add `NEXT_PUBLIC_API_BASE`
+- [ ] Add `NEXT_PUBLIC_API_URL`
 - [ ] Add `NEXT_PUBLIC_SUPABASE_URL`
 - [ ] Add `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 - [ ] Verify all values are correct

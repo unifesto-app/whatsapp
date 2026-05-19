@@ -28,7 +28,7 @@ export function SettingsContent() {
             <div>
               <p className="text-sm font-medium text-zinc-700">API Base URL</p>
               <p className="text-sm text-zinc-500">
-                {process.env.NEXT_PUBLIC_API_BASE || 'https://api.unifesto.app'}
+                {process.env.NEXT_PUBLIC_API_URL || 'https://api.unifesto.app'}
               </p>
             </div>
             <div className="mt-4 rounded-lg bg-zinc-50 p-3">
@@ -127,7 +127,7 @@ export function SettingsContent() {
           <div>
             <h4 className="mb-2 font-medium text-zinc-900">Environment Variables</h4>
             <div className="rounded-lg bg-zinc-900 p-4 font-mono text-sm text-zinc-100">
-              <div>NEXT_PUBLIC_API_BASE=https://api.unifesto.app</div>
+              <div>NEXT_PUBLIC_API_URL=https://api.unifesto.app</div>
               <div>NEXT_PUBLIC_SUPABASE_URL=your_supabase_url</div>
               <div>NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key</div>
             </div>

@@ -71,7 +71,7 @@ A comprehensive WhatsApp Cloud API management dashboard for Unifesto. This modul
    Create a `.env.local` file:
    ```env
    # API Configuration
-   NEXT_PUBLIC_API_BASE=https://api.unifesto.app
+   NEXT_PUBLIC_API_URL=https://api.unifesto.app
 
    # Supabase Configuration
    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
@@ -308,7 +308,7 @@ Required variables in `.env.local`:
 
 ```env
 # Backend API
-NEXT_PUBLIC_API_BASE=https://api.unifesto.app
+NEXT_PUBLIC_API_URL=https://api.unifesto.app
 
 # Supabase
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url

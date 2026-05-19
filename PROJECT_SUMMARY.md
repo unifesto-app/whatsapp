@@ -308,7 +308,7 @@ npm start
 
 ### Environment Variables
 Required in production:
-- `NEXT_PUBLIC_API_BASE`
+- `NEXT_PUBLIC_API_URL`
 - `NEXT_PUBLIC_SUPABASE_URL`
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 

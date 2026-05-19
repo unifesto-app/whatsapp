@@ -64,7 +64,7 @@ npm install
 ### Step 2: Configure Environment
 Create `.env.local`:
 ```env
-NEXT_PUBLIC_API_BASE=https://api.unifesto.app
+NEXT_PUBLIC_API_URL=https://api.unifesto.app
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```

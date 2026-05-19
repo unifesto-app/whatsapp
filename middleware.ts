@@ -53,26 +53,6 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
-  // Check super_admin role for authenticated users on protected routes
-  if (
-    user &&
-    !request.nextUrl.pathname.startsWith('/login') &&
-    !request.nextUrl.pathname.startsWith('/unauthorized') &&
-    request.nextUrl.pathname !== '/'
-  ) {
-    const { data: profile } = await supabase
-      .from('profiles')
-      .select('role')
-      .eq('id', user.id)
-      .single();
-
-    if (!profile || profile.role !== 'super_admin') {
-      const url = request.nextUrl.clone();
-      url.pathname = '/unauthorized';
-      return NextResponse.redirect(url);
-    }
-  }
-
   // Redirect to dashboard if already logged in
   if (user && request.nextUrl.pathname === '/login') {
     const url = request.nextUrl.clone();

@@ -1,17 +1,9 @@
-import { createClient } from '@/lib/supabase/server';
-import { redirect } from 'next/navigation';
 import { DashboardLayout } from '@/components/layout/dashboard-layout';
 import { DashboardContent } from '@/components/dashboard/dashboard-content';
+import { checkSuperAdmin } from '@/lib/auth/check-role';
 
 export default async function DashboardPage() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  if (!user) {
-    redirect('/login');
-  }
+  const { user } = await checkSuperAdmin();
 
   return (
     <DashboardLayout user={user}>
